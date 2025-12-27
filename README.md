@@ -35,3 +35,20 @@ Ferramenta de monitoramento ativo de servidor baseada em logs e processos.
 ```bash
 # Certifique-se de ter Python 3 instalado
 sudo apt update && sudo apt install python3
+
+---
+
+## 📈 Exemplo de Relatório Gerado
+*Trecho de um relatório automático gerado pelo `lab_report.py`:*
+
+| Porta | Estado | Serviço Detectado |
+|-------|--------|-------------------|
+| **22** | 🟢 ABERTA | `SSH-2.0-OpenSSH_8.2p1` |
+| **80** | 🟢 ABERTA | `Apache/2.4.41 (Ubuntu)` |
+
+---
+
+📫 **Autor:** Diego Machado
+*Estudante de Segurança da Informação e Entusiasta de DevSecOps.*
+
+
