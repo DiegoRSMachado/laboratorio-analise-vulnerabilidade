@@ -12,7 +12,7 @@ def scan_port(ip, port):
     """Verifica se uma porta está aberta e tenta pegar o Banner (versão do serviço)"""
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.settimeout(1.0) # Timeout rápido para agilizar
+        s.settimeout(1.0) # Timeout para agilizar
         result = s.connect_ex((ip, port))
         
         if result == 0:
