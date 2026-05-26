@@ -36,7 +36,7 @@ def generate_report(ip, open_ports, start_time, end_time):
     filename = f"Analise_{ip.replace('.', '_')}.md"
     
     with open(filename, "w") as f:
-        f.write(f"# 🕵️ Relatório de Análise Técnica: {ip}\n\n")
+        f.write(f"# Relatório de Análise Técnica: {ip}\n\n")
         f.write(f"**Data da Análise:** {start_time}\n")
         f.write(f"**Duração:** {end_time - start_time}\n\n")
         
@@ -51,14 +51,14 @@ def generate_report(ip, open_ports, start_time, end_time):
         for port, banner in open_ports:
             # Limpa caracteres estranhos do banner para não quebrar o Markdown
             safe_banner = banner.replace('|', '-') 
-            f.write(f"| **{port}** | 🟢 ABERTA | `{safe_banner}` |\n")
+            f.write(f"| **{port}** |  ABERTA | `{safe_banner}` |\n")
             
         f.write("\n## 3. Recomendação Inicial\n")
         f.write("- [ ] Verificar se estes serviços precisam estar expostos.\n")
         f.write("- [ ] Comparar versões dos banners com CVEs conhecidos.\n")
         
-    print(f"\n{GREEN}✅ Relatório gerado com sucesso: {filename}{RESET}")
-    print(f"👉 Dica: Use 'cat {filename}' para ver ou suba para o GitHub!")
+    print(f"\n{GREEN} Relatório gerado com sucesso: {filename}{RESET}")
+    print(f" Dica: Use 'cat {filename}' para ver ou suba para o GitHub!")
 
 def main():
     print(f"{BLUE}--- GERADOR DE RELATÓRIOS SOC AUTOMATIZADO ---{RESET}")
@@ -79,7 +79,7 @@ def main():
         for port in common_ports:
             is_open, banner = scan_port(target, port)
             if is_open:
-                print(f"   🔓 Porta {port} ABERTA! ({banner})")
+                print(f" Porta {port} ABERTA! ({banner})")
                 found_ports.append((port, banner))
             else:
                 # Opcional: printar portas fechadas (polui muito a tela)
