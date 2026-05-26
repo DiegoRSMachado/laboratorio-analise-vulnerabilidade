@@ -38,7 +38,7 @@ sudo apt update && sudo apt install python3
 
 ---
 
-## 📈 Exemplo de Relatório Gerado
+## Exemplo de Relatório Gerado
 *Trecho de um relatório automático gerado pelo `lab_report.py`:*
 
 | Porta | Estado | Serviço Detectado |
